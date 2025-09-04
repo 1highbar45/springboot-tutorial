@@ -34,4 +34,6 @@ build/
 /bin/
 
 
-!**/src/main/resource/
+# Ignore application properties files
+application.properties
+application*.properties
