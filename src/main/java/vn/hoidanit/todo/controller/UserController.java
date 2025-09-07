@@ -1,12 +1,11 @@
 package vn.hoidanit.todo.controller;
 
 import java.util.List;
-import java.util.NoSuchElementException;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,13 +13,13 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
 import vn.hoidanit.todo.entity.ApiResponse;
 import vn.hoidanit.todo.entity.User;
 import vn.hoidanit.todo.service.UserService;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class UserController {
 
 	private final UserService userService;
